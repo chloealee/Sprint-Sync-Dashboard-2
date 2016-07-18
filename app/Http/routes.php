@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('teams.tasks', 'TeamsController');
+Route::resource('teams', 'TeamsController');
+Route::resource('teams.tasks', 'TasksController');
 
 Route::bind('tasks', function($value, $route) {
 	return App\Task::whereSlug($value)->first();

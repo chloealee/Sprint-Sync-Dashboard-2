@@ -10,8 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::group(['middleware' => ['web']], function() {
 	Route::get('/', function () {
 	    return view('welcome');
 	});
@@ -30,4 +28,3 @@ Route::group(['middleware' => ['web']], function() {
 
 	Route::resource('teams', 'TeamsController');
 	Route::resource('teams.tasks', 'TasksController');
-});

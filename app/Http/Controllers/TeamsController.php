@@ -1,11 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Team;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+// use Redirect;
 
 class TeamsController extends Controller
 {
@@ -22,7 +24,10 @@ class TeamsController extends Controller
 
     public function store()
     {
+    	$input = Input::all();
+    	Team::create ($input);
 
+    	return Redirect::route('teams.index')->with('message', 'Team created!');
     }
 
     public function show(Team $team)
@@ -37,11 +42,16 @@ class TeamsController extends Controller
 
     public function update(Team $team)
     {
+    	$input = array_except(Input::all(), '_method');
+    	$team->update($input);
 
+    	return Redirect::route('teams.show', $team->slug)->with('message', 'Team updated.');
     }
 
     public function destroy(Team $team)
     {
+    	$team->delete();
 
+    	return Redirect::route('teams.index')->with('message', 'Team deleted.');
     }
 }

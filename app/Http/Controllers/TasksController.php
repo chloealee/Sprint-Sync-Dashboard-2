@@ -7,6 +7,9 @@ use App\Team;
 use App\Task;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+// use Redirect;
 
 class TasksController extends Controller
 {
@@ -22,7 +25,11 @@ class TasksController extends Controller
 
     public function store(Team $team)
     {
+    	$input = Input::all();
+    	$input['team_id'] = $team->id;
+    	Task::create($input);
 
+    	return Redirect::route('teams.show', $team->slug)->with('message', 'Task created!');
     }
 
     public function show(Team $team, Task $task)
@@ -37,11 +44,16 @@ class TasksController extends Controller
 
     public function update(Team $team, Task $task)
     {
+    	$input = array_except(Input::all(), '_method');
+    	$task->update($input);
 
+    	return Redirect::route('teams.tasks.show', [$team->slug, $task->slug])->with('message', 'Task updated.');
     }
 
     public function destroy(Team $team, Task $task)
     {
+    	$task->delete();
 
+    	return Redirect::route('teams.show', $team->slug)->with('message', 'Task deleted.');
     }
 }

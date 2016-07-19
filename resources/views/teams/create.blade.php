@@ -1,5 +1,9 @@
 @extends('app')
 
 @section('content')
-	This is my /resources/views/projects/create.blade.php file!
+    <h2>Create Team</h2>
+
+    {!! Form::model(new App\Team, ['route' => ['teams.store']]) !!}
+        @include('teams/partials/_form', ['submit_text' => 'Create Team'])
+    {!! Form::close() !!}
 @endsection

@@ -8,10 +8,10 @@
     {!! Form::text('slug') !!}
 </div>
 
-<div class="form-group">
+<!-- <div class="form-group">
     {!! Form::label('completed', 'Completed:') !!}
     {!! Form::checkbox('completed') !!}
-</div>
+</div> -->
 
 <div class="form-group">
     {!! Form::label('description', 'Description:') !!}

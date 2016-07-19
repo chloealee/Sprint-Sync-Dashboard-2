@@ -19,7 +19,7 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default">
+<!-- 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,22 +55,17 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 
+	<div class="content">
 		@if (Session::has('message'))
 			<div class="flash alert-info">
 				<p>{{ Session::get('message') }}</p>
 			</div>
 		@endif
-		@if ($errors->any())
-			<div class='flash alert-danger'>
-				@foreach ( $errors->all() as $error )
-					<p>{{ $error }}</p>
-				@endforeach
-			</div>
-		@endif
 
 		@yield('content')
+	</div>
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

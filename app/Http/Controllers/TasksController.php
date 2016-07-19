@@ -9,10 +9,15 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-// use Redirect;
 
 class TasksController extends Controller
 {
+	protected $rules = [
+		'name' => ['required'],
+		'slug' => ['required'],
+		'description' => ['required'],
+	];
+
     public function index(Team $team)
     {
     	return view('tasks.index', compact('team'));
@@ -23,8 +28,10 @@ class TasksController extends Controller
     	return view('tasks.create', compact('team'));
     }
 
-    public function store(Team $team)
+    public function store(Team $team, Request $request)
     {
+    	$this->validate($request, $this->rules);
+
     	$input = Input::all();
     	$input['team_id'] = $team->id;
     	Task::create($input);
@@ -42,8 +49,10 @@ class TasksController extends Controller
     	return view('tasks.edit', compact('team', 'task'));
     }
 
-    public function update(Team $team, Task $task)
+    public function update(Team $team, Task $task, Request $request)
     {
+    	$this->validate($request, $this->rules);
+
     	$input = array_except(Input::all(), '_method');
     	$task->update($input);
 

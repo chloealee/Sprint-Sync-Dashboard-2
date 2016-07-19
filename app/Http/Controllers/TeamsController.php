@@ -7,10 +7,14 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-// use Redirect;
 
 class TeamsController extends Controller
 {
+	protected $rules = [
+		'name' => ['required'],
+		'slug' => ['required'],
+	];
+
     public function index()
     {
     	$teams = Team::all();
@@ -22,8 +26,10 @@ class TeamsController extends Controller
     	return view('teams.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+    	$this->validate($request, $this->rules);
+
     	$input = Input::all();
     	Team::create ($input);
 
@@ -40,8 +46,10 @@ class TeamsController extends Controller
     	return view('teams.edit', compact('team'));
     }
 
-    public function update(Team $team)
+    public function update(Team $team, Request $request)
     {
+	    $this->validate($request, $this->rules);
+
     	$input = array_except(Input::all(), '_method');
     	$team->update($input);
 

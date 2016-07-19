@@ -11,21 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::group(['middleware' => ['web']], function() {
+	Route::get('/', function () {
+	    return view('welcome');
+	});
 
-// Provide controller methods with object instead of ID
-Route::model('tasks', 'Task');
-Route::model('teams', 'Team');
+	// Provide controller methods with object instead of ID
+	Route::model('tasks', 'Task');
+	Route::model('teams', 'Team');
 
-// Use slugs rather than IDs in URLs
-Route::bind('tasks', function($value, $route) {
-	return App\Task::whereSlug($value)->first();
-});
-Route::bind('teams', function($value, $route) {
-	return App\Team::whereSlug($value)->first();
-});
+	// Use slugs rather than IDs in URLs
+	Route::bind('tasks', function($value, $route) {
+		return App\Task::whereSlug($value)->first();
+	});
+	Route::bind('teams', function($value, $route) {
+		return App\Team::whereSlug($value)->first();
+	});
 
-Route::resource('teams', 'TeamsController');
-Route::resource('teams.tasks', 'TasksController');
+	Route::resource('teams', 'TeamsController');
+	Route::resource('teams.tasks', 'TasksController');
+});

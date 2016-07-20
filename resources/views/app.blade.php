@@ -6,9 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sprint Sync Dashboard</title>
 
+	<link rel="stylesheet" href="{{ asset('vendor/forge/forge.css') }}" media="screen, projection" type="text/css">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-
-	<link rel="stylesheet" href="dist/forge.css" media="screen, projection" type="text/css">
 
 <!--
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->

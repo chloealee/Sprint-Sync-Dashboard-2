@@ -23,7 +23,9 @@
         </ul>
     @endif
 
-    <p>
-        {!! link_to_route('teams.create', 'Create Team') !!}
-    </p>
+    <!-- <p> -->
+    <!-- <span class='buttons'> -->
+        {!! link_to_route('teams.create', 'Create Team', array(), array('class' => 'button -tertiary')) !!}
+    <!-- </span> -->
+    <!-- </p> -->
 @endsection

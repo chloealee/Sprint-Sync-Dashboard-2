@@ -4,17 +4,19 @@
     <h2>Teams</h2>
 
     @if ( !$teams->count() )
-        You have no teams.
+        <h5>You have no teams.</h5>
     @else
         <ul>
             @foreach( $teams as $team )
                 <li>
                     {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('teams.destroy', $team->slug))) !!}
                         <a href="{{ route('teams.show', $team->slug) }}">{{ $team->name }}</a>
-                        (
-                            {!! link_to_route('teams.edit', 'Edit', array($team->slug), array('class' => 'btn btn-info')) !!},
+                        <!-- ( -->
+                        <span class='buttons'>
+                            {!! link_to_route('teams.edit', 'Edit', array($team->slug), array('class' => 'btn btn-info')) !!}
                             {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
-                        )
+                        <!-- ) -->
+                        </span>
                     {!! Form::close() !!}
                 </li>
             @endforeach

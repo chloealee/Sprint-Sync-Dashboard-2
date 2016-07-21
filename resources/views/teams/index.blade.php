@@ -14,8 +14,8 @@
                             <a href="{{ route('teams.show', $team->slug) }}">{{ $team->name }}</a>
 
                             <span class="right-align">
-                                {!! link_to_route('teams.edit', 'Edit', [$team->slug], ['class' => 'button -tertiary']) !!}
-                                {!! Form::submit('Delete', ['class' => 'button -tertiary']) !!}
+                                {!! link_to_route('teams.edit', 'Edit', [$team->slug], ['class'=>'button -tertiary']) !!}
+                                {!! Form::submit('Delete', ['class'=>'button -tertiary']) !!}
                                 {!! Form::close() !!}
                             </span>
                     </li>
@@ -24,7 +24,7 @@
         @endif
     </div>
 
-    <div class='right-align'>
-        {!! link_to_route('teams.create', 'Create Team', [], ['class' => 'button -tertiary']) !!}
+    <div class="right-align">
+        {!! link_to_route('teams.create', 'Create Team', [], ['class'=>'button -tertiary']) !!}
     </div>
 @endsection

@@ -8,21 +8,6 @@
 
 	<link rel="stylesheet" href="{{ asset('vendor/forge/forge.css') }}" media="screen, projection" type="text/css">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-
-<!--
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
-
-	<!-- Fonts -->
-	<style>
-      @font-face {
-          font-family: 'Proxima Nova';
-          src: url('fonts/ProximaNova-Bold.otf') format('opentype');
-      }
-      @font-face {
-          font-family: 'Covered By Your Grace';
-          src: url('fonts/CoveredByYourGrace.ttf') format('truetype');
-      }
-    </style>
 </head>
 <body>
 	<div class="container">
@@ -43,8 +28,6 @@
 	</div>
 
 	<!-- Scripts -->
-<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="dist/forge.js"></script>
 </body>
 </html>

@@ -1,2 +1,23 @@
+body {
+  background-color: #23b7fb; }
+
+h2 {
+  padding: 5% 0 5% 10%;
+  font-size: 60px; }
+
+a {
+  color: #4e2b63;
+  font-family: 'CoveredGrace';
+  font-size: 40px; }
+
+.right-align {
+  text-align: right;
+  padding: 10% 10% 0 0; }
+
+.body {
+  padding-left: 10%; }
+
+.form {
+  padding-right: 10%; }
 
 /*# sourceMappingURL=app.css.map */

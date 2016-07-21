@@ -6,7 +6,7 @@
     </h2>
 
     <div class="body">
-	    {{ $task->description }}
+	    <p>{{ $task->description }}<p>
 
 	    <div class="options">
 	    	{!! link_to_route('teams.show', 'Back to ' . $team->name, [$team->slug], ['class'=>'button -tertiary']) !!}

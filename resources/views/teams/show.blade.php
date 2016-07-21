@@ -5,7 +5,7 @@
 
     <div class="body">
         @if ( !$team->tasks->count() )
-            Your team has no tasks.
+            <p>Your team has no tasks.<p>
         @else
             <ul>
                 @foreach( $team->tasks as $task )

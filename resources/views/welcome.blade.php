@@ -66,7 +66,49 @@
 
       <li>
         <figure class="polaroid">
+          <img src={{asset('images/james.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/jeff.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/jen.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/jess.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/luke.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
           <img src={{asset('images/joe.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/katie.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/kika.png')}}>
         </figure>
       </li>
 
@@ -85,6 +127,12 @@
       <li>
         <figure class="polaroid">
           <img src={{asset('images/nami.png')}}>
+        </figure>
+      </li>
+
+      <li>
+        <figure class="polaroid">
+          <img src={{asset('images/nick.png')}}>
         </figure>
       </li>
 

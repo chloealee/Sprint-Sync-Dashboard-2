@@ -13,9 +13,14 @@ h3 {
   font-size: 30px; }
 
 a {
-  color: #4e2b63;
+  color: white;
   font-family: 'CoveredGrace';
   font-size: 40px; }
+
+p {
+  font-family: 'CoveredGrace';
+  font-size: 25px;
+  color: white; }
 
 .right-align {
   text-align: right;

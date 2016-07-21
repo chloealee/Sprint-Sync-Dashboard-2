@@ -4,9 +4,18 @@ body {
 	background-color: #23b7fb;
 }
 
+h1 {
+	padding-top: 10%;
+}
+
 h2 {
 	padding: 5% 0 5% 10%;
 	font-size: 60px;
+}
+
+h3 {
+	font-family: 'CoveredGrace';
+	font-size: 30px;
 }
 
 a {
@@ -17,7 +26,7 @@ a {
 
 .right-align {
 	text-align: right;
-	padding: 10% 10% 0 0;
+	padding: 10% 10% 5% 0;
 }
 
 .body {
@@ -39,3 +48,12 @@ a {
 #options-right-align {
 	padding-left: 50%;
 }
+
+.welcome {
+	text-align: center;
+}
+
+#padding-top {
+	padding-top: 5%;
+}
+

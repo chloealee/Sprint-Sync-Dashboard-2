@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h2 class="heading -emphasized">Create Task for Team "{{ $team->name }}"</h2>
+    <h2 class="heading -emphasized">Create Task for Team {{ $team->name }}</h2>
 
     <div class="body">
     	<div class="form">

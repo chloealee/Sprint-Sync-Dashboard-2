@@ -7,7 +7,7 @@
         @include('teams/partials/_form', ['submit_text' => 'Create Team'])
 
     <div class="body">
-	    {!! link_to_route('teams.index', 'Back to Teams', array(), array('class' => 'button -tertiary')) !!}
+	    {!! link_to_route('teams.index', 'Back to Teams', [], ['class' => 'button -tertiary']) !!}
     </div>
 
     {!! Form::close() !!}

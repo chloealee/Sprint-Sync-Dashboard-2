@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sprint Sync Dashboard</title>
+	<title>Sprint Sync Planner</title>
 
 	<link rel="stylesheet" href="{{ asset('vendor/forge/forge.css') }}" media="screen, projection" type="text/css">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">

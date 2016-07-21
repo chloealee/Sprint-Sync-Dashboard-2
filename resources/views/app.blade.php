@@ -12,12 +12,12 @@
 <body>
 	<div class="container">
 		@if (Session::has('message'))
-			<div class="flash alert-info">
+			<div class="messages">
 				<p>{{ Session::get('message') }}</p>
 			</div>
 		@endif
 		@if ($errors->any())
-			<div class='flash alert-danger'>
+			<div class='messages -error'>
 				@foreach ( $errors->all() as $error )
 					<p>{{ $error }}</p>
 				@endforeach

@@ -9,5 +9,9 @@
 		        @include('tasks/partials/_form', ['submit_text' => 'Edit Task'])
 		    {!! Form::close() !!}
 	    </div>
+
+	    <div class="options">
+	    	{!! link_to_route('teams.show', 'Back to ' . $team->name, [$team->slug], ['class'=>'button -tertiary']) !!}
+	    </div>
 	</div>
 @endsection

@@ -1,10 +1,15 @@
 @extends('app')
 
 @section('content')
-    <h2>
-        {!! link_to_route('teams.show', $team->name, [$team->slug]) !!} -
-        {{ $task->name }}
+    <h2 class="heading -emphasized">
+        {{ $team->name }} - {{ $task->name }}
     </h2>
 
-    {{ $task->description }}
+    <div class="body">
+	    {{ $task->description }}
+
+	    <div class="options">
+	    	{!! link_to_route('teams.show', 'Back to ' . $team->name, [$team->slug], ['class'=>'button -tertiary']) !!}
+	    </div>
+	</div>
 @endsection

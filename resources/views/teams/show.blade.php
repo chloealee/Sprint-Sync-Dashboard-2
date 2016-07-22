@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <h2 class="heading -emphasized">{{ $team->name }}</h2>
+    <h2 class="heading -emphasized" id="team">{{ $team->name }}</h2>
     <h2 class="heading -beta">Team Members:</h2>
     <div class="body">
         @if ( $team->slug == "northstar" )

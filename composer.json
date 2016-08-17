@@ -9,8 +9,7 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
         "bestmomo/scafold": "dev-master",
-        "fideloper/proxy": "^3.1",
-        "vendor/autoload.php"
+        "fideloper/proxy": "^3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

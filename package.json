@@ -1,13 +1,27 @@
+// {
+//   "private": true,
+//   "scripts": {
+//     "prod": "gulp --production",
+//     "postinstall": "gulp --production",
+//     "dev": "gulp watch"
+//   },
+//   "dependencies": {
+//     "gulp": "^3.9.1",
+//     "laravel-elixir": "^5.0.0",
+//     "bootstrap-sass": "^3.0.0"
+//   }
+// }
 {
-  "private": true,
-  "scripts": {
-    "prod": "gulp --production",
-    "postinstall": "gulp --production",
-    "dev": "gulp watch"
-  },
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "laravel-elixir": "^5.0.0",
-    "bootstrap-sass": "^3.0.0"
-  }
+    "private": true,
+    "devDependencies": {
+        "gulp": "^3.8.8"
+    },
+    "dependencies": {
+        "laravel-elixir": "^3.0.0",
+        "gulp": "^3.8.8",
+        "bower": "^1.5.2"
+    },
+    "scripts": {
+        "postinstall": "bower install && gulp --production"
+    }
 }
